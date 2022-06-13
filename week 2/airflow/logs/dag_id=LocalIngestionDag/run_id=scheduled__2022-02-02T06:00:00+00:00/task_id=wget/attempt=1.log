@@ -1,0 +1,338 @@
+[2022-05-30 19:24:38,263] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 19:24:38,343] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 19:24:38,351] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 19:24:38,362] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 19:24:38,374] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 19:24:38,449] {taskinstance.py:1378} INFO - Executing <Task(BashOperator): wget> on 2022-02-02 06:00:00+00:00
+[2022-05-30 19:24:38,473] {standard_task_runner.py:52} INFO - Started process 2012 to run task
+[2022-05-30 19:24:38,500] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'wget', 'scheduled__2022-02-02T06:00:00+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmp2wyau14_', '--error-file', '/tmp/tmp_0k7uk9f']
+[2022-05-30 19:24:38,504] {standard_task_runner.py:80} INFO - Job 47: Subtask wget
+[2022-05-30 19:24:38,741] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [running]> on host e083cbf9476b
+[2022-05-30 19:24:38,876] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 19:24:38,980] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=wget
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-02T06:00:00+00:00
+[2022-05-30 19:24:38,998] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-30 19:24:39,006] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSL https://s3.amazonaws.com/nyc-tlc/trip+data//yellow_tripdata_2022-02.parquet > /opt/***/output_2022-02.parquet']
+[2022-05-30 19:24:39,045] {subprocess.py:85} INFO - Output:
+[2022-05-30 19:24:39,762] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-05-30 19:24:39,903] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=LocalIngestionDag, task_id=wget, execution_date=20220202T060000, start_date=20220530T192438, end_date=20220530T192439
+[2022-05-30 19:24:39,994] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-05-30 19:24:40,079] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-30 20:10:36,760] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 20:10:36,879] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 20:10:36,881] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 20:10:36,890] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 20:10:36,904] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 20:10:37,241] {taskinstance.py:1378} INFO - Executing <Task(BashOperator): wget> on 2022-02-02 06:00:00+00:00
+[2022-05-30 20:10:37,279] {standard_task_runner.py:52} INFO - Started process 426 to run task
+[2022-05-30 20:10:37,341] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'wget', 'scheduled__2022-02-02T06:00:00+00:00', '--job-id', '79', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpga23d_2a', '--error-file', '/tmp/tmpq0zvl7m0']
+[2022-05-30 20:10:37,426] {standard_task_runner.py:80} INFO - Job 79: Subtask wget
+[2022-05-30 20:10:38,513] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [running]> on host e083cbf9476b
+[2022-05-30 20:10:38,901] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 20:10:43,213] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=wget
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-02T06:00:00+00:00
+[2022-05-30 20:10:43,358] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-30 20:10:43,405] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSL https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2022-02.parquet > /opt/***/output_2022-02.parquet']
+[2022-05-30 20:10:44,963] {subprocess.py:85} INFO - Output:
+[2022-05-30 20:10:52,438] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-05-30 20:10:52,657] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=LocalIngestionDag, task_id=wget, execution_date=20220202T060000, start_date=20220530T201036, end_date=20220530T201052
+[2022-05-30 20:10:52,767] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-05-30 20:10:53,092] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-30 20:13:28,596] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 20:13:28,732] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 20:13:28,747] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 20:13:28,749] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 20:13:28,753] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 20:13:28,993] {taskinstance.py:1378} INFO - Executing <Task(BashOperator): wget> on 2022-02-02 06:00:00+00:00
+[2022-05-30 20:13:29,035] {standard_task_runner.py:52} INFO - Started process 669 to run task
+[2022-05-30 20:13:29,070] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'wget', 'scheduled__2022-02-02T06:00:00+00:00', '--job-id', '96', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpg616973f', '--error-file', '/tmp/tmp51hwdiww']
+[2022-05-30 20:13:29,074] {standard_task_runner.py:80} INFO - Job 96: Subtask wget
+[2022-05-30 20:13:30,615] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [running]> on host e083cbf9476b
+[2022-05-30 20:13:30,865] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 20:13:31,006] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=wget
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-02T06:00:00+00:00
+[2022-05-30 20:13:31,046] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-30 20:13:31,054] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSL https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2022-02.parquet > /opt/***/output_2022-02.parquet']
+[2022-05-30 20:13:31,123] {subprocess.py:85} INFO - Output:
+[2022-05-30 20:14:14,176] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-05-30 20:14:14,353] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=LocalIngestionDag, task_id=wget, execution_date=20220202T060000, start_date=20220530T201328, end_date=20220530T201414
+[2022-05-30 20:14:14,479] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-05-30 20:14:14,560] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-30 20:17:37,829] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 20:17:37,946] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 20:17:37,948] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 20:17:37,950] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 20:17:37,952] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 20:17:38,194] {taskinstance.py:1378} INFO - Executing <Task(BashOperator): wget> on 2022-02-02 06:00:00+00:00
+[2022-05-30 20:17:38,363] {standard_task_runner.py:52} INFO - Started process 964 to run task
+[2022-05-30 20:17:38,440] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'wget', 'scheduled__2022-02-02T06:00:00+00:00', '--job-id', '114', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpt12f0pk_', '--error-file', '/tmp/tmp8tb4v2ic']
+[2022-05-30 20:17:38,462] {standard_task_runner.py:80} INFO - Job 114: Subtask wget
+[2022-05-30 20:17:39,019] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [running]> on host e083cbf9476b
+[2022-05-30 20:17:40,658] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 20:17:41,145] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=wget
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-02T06:00:00+00:00
+[2022-05-30 20:17:41,180] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-30 20:17:41,185] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSL https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2022-02.parquet > /opt/***/output_2022-02.parquet']
+[2022-05-30 20:17:41,221] {subprocess.py:85} INFO - Output:
+[2022-05-30 20:18:11,600] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-05-30 20:18:11,713] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=LocalIngestionDag, task_id=wget, execution_date=20220202T060000, start_date=20220530T201737, end_date=20220530T201811
+[2022-05-30 20:18:11,792] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-05-30 20:18:11,855] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-30 20:20:36,728] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 20:20:36,875] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 20:20:36,878] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 20:20:36,880] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 20:20:36,882] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 20:20:37,029] {taskinstance.py:1378} INFO - Executing <Task(BashOperator): wget> on 2022-02-02 06:00:00+00:00
+[2022-05-30 20:20:37,090] {standard_task_runner.py:52} INFO - Started process 1199 to run task
+[2022-05-30 20:20:37,143] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'wget', 'scheduled__2022-02-02T06:00:00+00:00', '--job-id', '128', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpxig3125p', '--error-file', '/tmp/tmpxz9mv9rd']
+[2022-05-30 20:20:37,161] {standard_task_runner.py:80} INFO - Job 128: Subtask wget
+[2022-05-30 20:20:37,948] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [running]> on host e083cbf9476b
+[2022-05-30 20:20:39,875] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 20:20:40,474] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=wget
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-02T06:00:00+00:00
+[2022-05-30 20:20:40,486] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-30 20:20:40,506] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSL https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2022-02.parquet > /opt/***/output_2022-02.parquet']
+[2022-05-30 20:20:41,354] {subprocess.py:85} INFO - Output:
+[2022-05-30 20:21:14,115] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-05-30 20:21:15,922] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=LocalIngestionDag, task_id=wget, execution_date=20220202T060000, start_date=20220530T202036, end_date=20220530T202115
+[2022-05-30 20:21:17,784] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-05-30 20:21:18,657] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-30 20:28:21,666] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 20:28:21,708] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 20:28:21,711] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 20:28:21,715] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 20:28:21,716] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 20:28:21,779] {taskinstance.py:1378} INFO - Executing <Task(BashOperator): wget> on 2022-02-02 06:00:00+00:00
+[2022-05-30 20:28:21,811] {standard_task_runner.py:52} INFO - Started process 1687 to run task
+[2022-05-30 20:28:21,863] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'wget', 'scheduled__2022-02-02T06:00:00+00:00', '--job-id', '153', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpq97j8vce', '--error-file', '/tmp/tmpylynxfwr']
+[2022-05-30 20:28:21,875] {standard_task_runner.py:80} INFO - Job 153: Subtask wget
+[2022-05-30 20:28:22,631] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [running]> on host e083cbf9476b
+[2022-05-30 20:28:23,092] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 20:28:23,310] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=wget
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-02T06:00:00+00:00
+[2022-05-30 20:28:23,315] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-30 20:28:23,317] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSL https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2022-02.parquet > /opt/***/output_2022-02.parquet']
+[2022-05-30 20:28:23,346] {subprocess.py:85} INFO - Output:
+[2022-05-30 20:30:05,058] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-05-30 20:30:05,138] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=LocalIngestionDag, task_id=wget, execution_date=20220202T060000, start_date=20220530T202821, end_date=20220530T203005
+[2022-05-30 20:30:05,217] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-05-30 20:30:05,258] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-05-30 21:14:00,300] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 21:14:00,320] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 21:14:00,321] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 21:14:00,324] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 21:14:00,326] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 21:14:00,349] {taskinstance.py:1378} INFO - Executing <Task(BashOperator): wget> on 2022-02-02 06:00:00+00:00
+[2022-05-30 21:14:00,378] {standard_task_runner.py:52} INFO - Started process 244 to run task
+[2022-05-30 21:14:00,406] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'wget', 'scheduled__2022-02-02T06:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpst6md2zx', '--error-file', '/tmp/tmp1v85cizm']
+[2022-05-30 21:14:00,430] {standard_task_runner.py:80} INFO - Job 6: Subtask wget
+[2022-05-30 21:14:00,643] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [running]> on host 973151ef250d
+[2022-05-30 21:14:00,789] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 21:14:00,946] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=wget
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-02T06:00:00+00:00
+[2022-05-30 21:14:00,952] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-30 21:14:00,963] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSL https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2022-02.parquet > /opt/***/output_2022-02.parquet']
+[2022-05-30 21:14:01,014] {subprocess.py:85} INFO - Output:
+[2022-05-30 21:14:12,704] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-05-30 21:14:12,777] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=LocalIngestionDag, task_id=wget, execution_date=20220202T060000, start_date=20220530T211400, end_date=20220530T211412
+[2022-05-30 21:14:12,846] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-05-30 21:14:12,892] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-05-30 22:11:08,642] {taskinstance.py:1154} INFO - Dependencies not met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>, dependency 'Execution Date' FAILED: The execution date is 2022-02-02T06:00:00+00:00 but this is after the task's end date 2022-02-01T00:00:00+00:00.
+[2022-05-30 22:11:08,643] {taskinstance.py:1154} INFO - Dependencies not met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>, dependency 'Execution Date' FAILED: The execution date is 2022-02-02T06:00:00+00:00 but this is after the task's DAG's end date 2022-02-01T00:00:00+00:00.
+[2022-05-30 22:11:08,645] {local_task_job.py:101} INFO - Task is not able to be run
+[2022-05-30 22:12:08,856] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 22:12:08,900] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 22:12:08,902] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:12:08,903] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 22:12:08,904] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:12:08,956] {taskinstance.py:1378} INFO - Executing <Task(BashOperator): wget> on 2022-02-02 06:00:00+00:00
+[2022-05-30 22:12:08,986] {standard_task_runner.py:52} INFO - Started process 971 to run task
+[2022-05-30 22:12:09,012] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'wget', 'scheduled__2022-02-02T06:00:00+00:00', '--job-id', '191', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpbpy0ysh2', '--error-file', '/tmp/tmpxgvq0mr1']
+[2022-05-30 22:12:09,014] {standard_task_runner.py:80} INFO - Job 191: Subtask wget
+[2022-05-30 22:12:09,510] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [running]> on host 8ac972de2f4f
+[2022-05-30 22:12:09,682] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 22:12:09,943] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=wget
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-02T06:00:00+00:00
+[2022-05-30 22:12:09,951] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-30 22:12:09,962] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSL https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2022-02.parquet > /opt/***/output_2022-02.parquet']
+[2022-05-30 22:12:10,063] {subprocess.py:85} INFO - Output:
+[2022-05-30 22:12:46,631] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-05-30 22:12:46,812] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=LocalIngestionDag, task_id=wget, execution_date=20220202T060000, start_date=20220530T221208, end_date=20220530T221246
+[2022-05-30 22:12:46,923] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-05-30 22:12:47,040] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-05-30 22:16:46,354] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 22:16:46,422] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 22:16:46,423] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:16:46,425] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 22:16:46,427] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:16:46,554] {taskinstance.py:1378} INFO - Executing <Task(BashOperator): wget> on 2022-02-02 06:00:00+00:00
+[2022-05-30 22:16:46,602] {standard_task_runner.py:52} INFO - Started process 1297 to run task
+[2022-05-30 22:16:46,691] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'wget', 'scheduled__2022-02-02T06:00:00+00:00', '--job-id', '212', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmp9c4hjkc9', '--error-file', '/tmp/tmpzsejdojd']
+[2022-05-30 22:16:46,716] {standard_task_runner.py:80} INFO - Job 212: Subtask wget
+[2022-05-30 22:16:47,509] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [running]> on host 8ac972de2f4f
+[2022-05-30 22:16:47,737] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 22:16:48,011] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=wget
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-02T06:00:00+00:00
+[2022-05-30 22:16:48,025] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-30 22:16:48,037] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSL https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2022-02.parquet > /opt/***/output_2022-02.parquet']
+[2022-05-30 22:16:48,096] {subprocess.py:85} INFO - Output:
+[2022-05-30 22:17:08,072] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-05-30 22:17:10,090] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=LocalIngestionDag, task_id=wget, execution_date=20220202T060000, start_date=20220530T221646, end_date=20220530T221710
+[2022-05-30 22:17:10,606] {local_task_job.py:221} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2022-05-30 22:17:10,634] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 1297. PIDs of all processes in the group: [1297]
+[2022-05-30 22:17:10,639] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 1297
+[2022-05-30 22:17:10,660] {taskinstance.py:1542} ERROR - Received SIGTERM. Terminating subprocesses.
+[2022-05-30 22:17:10,668] {subprocess.py:103} INFO - Sending SIGTERM signal to process group
+[2022-05-30 22:17:10,677] {standard_task_runner.py:97} ERROR - Failed to execute job 212 for task wget ([Errno 3] No such process; 1297)
+[2022-05-30 22:17:12,043] {process_utils.py:75} INFO - Process psutil.Process(pid=1297, status='terminated', exitcode=1, started='22:16:45') (1297) terminated with exit code 1
+[2022-05-30 22:20:54,217] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 22:20:54,399] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 22:20:54,402] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:20:54,404] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 22:20:54,405] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:20:54,477] {taskinstance.py:1378} INFO - Executing <Task(BashOperator): wget> on 2022-02-02 06:00:00+00:00
+[2022-05-30 22:20:54,522] {standard_task_runner.py:52} INFO - Started process 1690 to run task
+[2022-05-30 22:20:54,565] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'wget', 'scheduled__2022-02-02T06:00:00+00:00', '--job-id', '243', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpvtep1prs', '--error-file', '/tmp/tmpol7ka630']
+[2022-05-30 22:20:54,574] {standard_task_runner.py:80} INFO - Job 243: Subtask wget
+[2022-05-30 22:20:54,918] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [running]> on host 8ac972de2f4f
+[2022-05-30 22:20:55,001] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 22:20:55,111] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=wget
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-02T06:00:00+00:00
+[2022-05-30 22:20:55,132] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-30 22:20:55,136] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSL https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2022-02.parquet > /opt/***/output_2022-02.parquet']
+[2022-05-30 22:20:55,227] {subprocess.py:85} INFO - Output:
+[2022-05-30 22:21:40,005] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-05-30 22:21:46,375] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=LocalIngestionDag, task_id=wget, execution_date=20220202T060000, start_date=20220530T222054, end_date=20220530T222146
+[2022-05-30 22:21:48,743] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-05-30 22:21:49,439] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-30 22:28:14,476] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 22:28:14,496] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 22:28:14,497] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:28:14,498] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 22:28:14,499] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:28:14,523] {taskinstance.py:1378} INFO - Executing <Task(BashOperator): wget> on 2022-02-02 06:00:00+00:00
+[2022-05-30 22:28:14,542] {standard_task_runner.py:52} INFO - Started process 2123 to run task
+[2022-05-30 22:28:14,557] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'wget', 'scheduled__2022-02-02T06:00:00+00:00', '--job-id', '262', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpcc4_aw4l', '--error-file', '/tmp/tmpmenrdjn3']
+[2022-05-30 22:28:14,561] {standard_task_runner.py:80} INFO - Job 262: Subtask wget
+[2022-05-30 22:28:14,661] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.wget scheduled__2022-02-02T06:00:00+00:00 [running]> on host 8ac972de2f4f
+[2022-05-30 22:28:14,799] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 22:28:14,872] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=wget
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-02T06:00:00+00:00
+[2022-05-30 22:28:14,876] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-30 22:28:14,878] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSL https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2022-02.parquet > /opt/***/output_2022-02.parquet']
+[2022-05-30 22:28:14,906] {subprocess.py:85} INFO - Output:
+[2022-05-30 22:28:21,344] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-05-30 22:28:21,437] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=LocalIngestionDag, task_id=wget, execution_date=20220202T060000, start_date=20220530T222814, end_date=20220530T222821
+[2022-05-30 22:28:21,512] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-05-30 22:28:21,571] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

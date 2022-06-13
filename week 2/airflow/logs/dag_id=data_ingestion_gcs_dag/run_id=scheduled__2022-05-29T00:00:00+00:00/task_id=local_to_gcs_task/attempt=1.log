@@ -1,0 +1,48 @@
+[2022-05-30 18:11:06,992] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcs_dag.local_to_gcs_task scheduled__2022-05-29T00:00:00+00:00 [queued]>
+[2022-05-30 18:11:07,001] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcs_dag.local_to_gcs_task scheduled__2022-05-29T00:00:00+00:00 [queued]>
+[2022-05-30 18:11:07,003] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 18:11:07,005] {taskinstance.py:1358} INFO - Starting attempt 1 of 2
+[2022-05-30 18:11:07,006] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 18:11:07,018] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): local_to_gcs_task> on 2022-05-29 00:00:00+00:00
+[2022-05-30 18:11:07,025] {standard_task_runner.py:52} INFO - Started process 2678 to run task
+[2022-05-30 18:11:07,030] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'local_to_gcs_task', 'scheduled__2022-05-29T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gcs_dag.py', '--cfg-path', '/tmp/tmp1thy_8bg', '--error-file', '/tmp/tmpato75dav']
+[2022-05-30 18:11:07,032] {standard_task_runner.py:80} INFO - Job 5: Subtask local_to_gcs_task
+[2022-05-30 18:11:07,088] {task_command.py:370} INFO - Running <TaskInstance: data_ingestion_gcs_dag.local_to_gcs_task scheduled__2022-05-29T00:00:00+00:00 [running]> on host e2389547c18a
+[2022-05-30 18:11:07,148] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=local_to_gcs_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-29T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-29T00:00:00+00:00
+[2022-05-30 18:11:10,173] {_metadata.py:104} WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+[2022-05-30 18:11:13,189] {_metadata.py:104} WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+[2022-05-30 18:11:13,198] {_metadata.py:104} WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: [Errno 111] Connection refused
+[2022-05-30 18:11:13,200] {_default.py:284} WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+[2022-05-30 18:11:13,205] {taskinstance.py:1890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/data_ingestion_gcs_dag.py", line 47, in upload_to_gcs
+    client = storage.Client()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/client.py", line 128, in __init__
+    _http=_http,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/client/__init__.py", line 320, in __init__
+    _ClientProjectMixin.__init__(self, project=project, credentials=credentials)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/client/__init__.py", line 268, in __init__
+    project = self._determine_default(project)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/client/__init__.py", line 287, in _determine_default
+    return _determine_default_project(project)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_helpers/__init__.py", line 152, in _determine_default_project
+    _, project = google.auth.default()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/auth/_default.py", line 579, in default
+    raise exceptions.DefaultCredentialsError(_HELP_MESSAGE)
+google.auth.exceptions.DefaultCredentialsError: Could not automatically determine credentials. Please set GOOGLE_APPLICATION_CREDENTIALS or explicitly create credentials and re-run the application. For more information, please see https://cloud.google.com/docs/authentication/getting-started
+[2022-05-30 18:11:13,247] {taskinstance.py:1401} INFO - Marking task as UP_FOR_RETRY. dag_id=data_ingestion_gcs_dag, task_id=local_to_gcs_task, execution_date=20220529T000000, start_date=20220530T181106, end_date=20220530T181113
+[2022-05-30 18:11:13,271] {standard_task_runner.py:97} ERROR - Failed to execute job 5 for task local_to_gcs_task (Could not automatically determine credentials. Please set GOOGLE_APPLICATION_CREDENTIALS or explicitly create credentials and re-run the application. For more information, please see https://cloud.google.com/docs/authentication/getting-started; 2678)
+[2022-05-30 18:11:13,303] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-05-30 18:11:13,342] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

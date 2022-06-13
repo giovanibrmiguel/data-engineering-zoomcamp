@@ -1,0 +1,99 @@
+[2022-05-30 20:21:41,671] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2021-08-02T06:00:00+00:00 [queued]>
+[2022-05-30 20:21:41,742] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2021-08-02T06:00:00+00:00 [queued]>
+[2022-05-30 20:21:41,745] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 20:21:41,747] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 20:21:41,749] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 20:21:41,882] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): ingest> on 2021-08-02 06:00:00+00:00
+[2022-05-30 20:21:41,999] {standard_task_runner.py:52} INFO - Started process 1311 to run task
+[2022-05-30 20:21:42,178] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'ingest', 'scheduled__2021-08-02T06:00:00+00:00', '--job-id', '146', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpxng0zj60', '--error-file', '/tmp/tmpe3ft3yk1']
+[2022-05-30 20:21:42,199] {standard_task_runner.py:80} INFO - Job 146: Subtask ingest
+[2022-05-30 20:21:42,951] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.ingest scheduled__2021-08-02T06:00:00+00:00 [running]> on host e083cbf9476b
+[2022-05-30 20:21:43,236] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 20:21:43,495] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=ingest
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-08-02T06:00:00+00:00
+[2022-05-30 20:21:43,500] {logging_mixin.py:115} INFO - yellow_taxi_2021_08 /opt/***/output_2021-08.parquet 2021-08-02T06:00:00+00:00
+[2022-05-30 20:21:43,502] {taskinstance.py:1890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_script.py", line 12, in ingest_callable
+    engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{db}')
+  File "<string>", line 2, in create_engine
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 298, in warned
+    return fn(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 518, in create_engine
+    u = _url.make_url(url)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/url.py", line 711, in make_url
+    return _parse_rfc1738_args(name_or_url)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/url.py", line 772, in _parse_rfc1738_args
+    components["port"] = int(components["port"])
+ValueError: invalid literal for int() with base 10: 'None'
+[2022-05-30 20:21:43,544] {taskinstance.py:1401} INFO - Marking task as FAILED. dag_id=LocalIngestionDag, task_id=ingest, execution_date=20210802T060000, start_date=20220530T202141, end_date=20220530T202143
+[2022-05-30 20:21:43,591] {standard_task_runner.py:97} ERROR - Failed to execute job 146 for task ingest (invalid literal for int() with base 10: 'None'; 1311)
+[2022-05-30 20:21:43,647] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-05-30 20:21:43,840] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-30 22:18:12,604] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2021-08-02T06:00:00+00:00 [queued]>
+[2022-05-30 22:18:12,655] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2021-08-02T06:00:00+00:00 [queued]>
+[2022-05-30 22:18:12,657] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:18:12,658] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 22:18:12,659] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:18:12,709] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): ingest> on 2021-08-02 06:00:00+00:00
+[2022-05-30 22:18:12,771] {standard_task_runner.py:52} INFO - Started process 1470 to run task
+[2022-05-30 22:18:12,784] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'ingest', 'scheduled__2021-08-02T06:00:00+00:00', '--job-id', '227', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpans_x1t3', '--error-file', '/tmp/tmpqxj0lrkn']
+[2022-05-30 22:18:12,799] {standard_task_runner.py:80} INFO - Job 227: Subtask ingest
+[2022-05-30 22:18:12,944] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.ingest scheduled__2021-08-02T06:00:00+00:00 [running]> on host 8ac972de2f4f
+[2022-05-30 22:18:13,156] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 22:18:13,458] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=ingest
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-08-02T06:00:00+00:00
+[2022-05-30 22:18:13,463] {logging_mixin.py:115} INFO - yellow_taxi_2021_08 /opt/***/output_2021-08.parquet 2021-08-02T06:00:00+00:00
+[2022-05-30 22:18:13,561] {logging_mixin.py:115} INFO - connection established successfully, inserting data...
+[2022-05-30 22:18:46,117] {local_task_job.py:156} INFO - Task exited with return code Negsignal.SIGKILL
+[2022-05-30 22:18:46,189] {taskinstance.py:1401} INFO - Marking task as FAILED. dag_id=LocalIngestionDag, task_id=ingest, execution_date=20210802T060000, start_date=20220530T221812, end_date=20220530T221846
+[2022-05-30 22:18:46,272] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-30 22:21:03,723] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2021-08-02T06:00:00+00:00 [queued]>
+[2022-05-30 22:21:03,776] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2021-08-02T06:00:00+00:00 [queued]>
+[2022-05-30 22:21:03,777] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:21:03,779] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 22:21:03,784] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:21:03,863] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): ingest> on 2021-08-02 06:00:00+00:00
+[2022-05-30 22:21:03,891] {standard_task_runner.py:52} INFO - Started process 1726 to run task
+[2022-05-30 22:21:03,904] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'ingest', 'scheduled__2021-08-02T06:00:00+00:00', '--job-id', '247', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpi_7ffsx8', '--error-file', '/tmp/tmpg2q2g5tc']
+[2022-05-30 22:21:03,909] {standard_task_runner.py:80} INFO - Job 247: Subtask ingest
+[2022-05-30 22:21:04,137] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.ingest scheduled__2021-08-02T06:00:00+00:00 [running]> on host 8ac972de2f4f
+[2022-05-30 22:21:04,264] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 22:21:04,359] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=ingest
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-08-02T06:00:00+00:00
+[2022-05-30 22:21:04,366] {logging_mixin.py:115} INFO - yellow_taxi_2021_08 /opt/***/output_2021-08.parquet 2021-08-02T06:00:00+00:00
+[2022-05-30 22:21:04,417] {logging_mixin.py:115} INFO - connection established successfully, inserting data...
+[2022-05-30 22:22:09,107] {local_task_job.py:156} INFO - Task exited with return code Negsignal.SIGKILL
+[2022-05-30 22:22:10,358] {taskinstance.py:1401} INFO - Marking task as FAILED. dag_id=LocalIngestionDag, task_id=ingest, execution_date=20210802T060000, start_date=20220530T222103, end_date=20220530T222210
+[2022-05-30 22:22:16,469] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,24 @@
+[2022-05-30 18:10:24,167] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcs_dag.format_to_parquet_task scheduled__2022-05-29T00:00:00+00:00 [queued]>
+[2022-05-30 18:10:24,180] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcs_dag.format_to_parquet_task scheduled__2022-05-29T00:00:00+00:00 [queued]>
+[2022-05-30 18:10:24,181] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 18:10:24,182] {taskinstance.py:1358} INFO - Starting attempt 1 of 2
+[2022-05-30 18:10:24,183] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 18:10:24,197] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): format_to_parquet_task> on 2022-05-29 00:00:00+00:00
+[2022-05-30 18:10:24,214] {standard_task_runner.py:52} INFO - Started process 2630 to run task
+[2022-05-30 18:10:24,218] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'format_to_parquet_task', 'scheduled__2022-05-29T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gcs_dag.py', '--cfg-path', '/tmp/tmp1rcj32ic', '--error-file', '/tmp/tmp2whbpo8h']
+[2022-05-30 18:10:24,220] {standard_task_runner.py:80} INFO - Job 4: Subtask format_to_parquet_task
+[2022-05-30 18:10:24,370] {task_command.py:370} INFO - Running <TaskInstance: data_ingestion_gcs_dag.format_to_parquet_task scheduled__2022-05-29T00:00:00+00:00 [running]> on host e2389547c18a
+[2022-05-30 18:10:24,648] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=format_to_parquet_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-29T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-29T00:00:00+00:00
+[2022-05-30 18:10:24,699] {data_ingestion_gcs_dag.py:26} ERROR - Can only accept source files in CSV format, for the moment
+[2022-05-30 18:10:24,707] {python.py:173} INFO - Done. Returned value was: None
+[2022-05-30 18:10:24,790] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcs_dag, task_id=format_to_parquet_task, execution_date=20220529T000000, start_date=20220530T181024, end_date=20220530T181024
+[2022-05-30 18:10:24,906] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-05-30 18:10:24,992] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

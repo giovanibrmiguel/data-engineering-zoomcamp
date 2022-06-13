@@ -1,0 +1,23 @@
+[2022-05-31 19:22:25,129] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: taxi_zones_ingestion_gcs_dag.format_to_parquet_task scheduled__2022-04-01T06:00:00+00:00 [queued]>
+[2022-05-31 19:22:25,158] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: taxi_zones_ingestion_gcs_dag.format_to_parquet_task scheduled__2022-04-01T06:00:00+00:00 [queued]>
+[2022-05-31 19:22:25,161] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-31 19:22:25,164] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-31 19:22:25,170] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-31 19:22:25,205] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): format_to_parquet_task> on 2022-04-01 06:00:00+00:00
+[2022-05-31 19:22:25,226] {standard_task_runner.py:52} INFO - Started process 1069 to run task
+[2022-05-31 19:22:25,254] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'taxi_zones_ingestion_gcs_dag', 'format_to_parquet_task', 'scheduled__2022-04-01T06:00:00+00:00', '--job-id', '473', '--raw', '--subdir', 'DAGS_FOLDER/taxi_zones_ingestion.py', '--cfg-path', '/tmp/tmpkgw5imma', '--error-file', '/tmp/tmpyp4hk90z']
+[2022-05-31 19:22:25,260] {standard_task_runner.py:80} INFO - Job 473: Subtask format_to_parquet_task
+[2022-05-31 19:22:25,381] {task_command.py:370} INFO - Running <TaskInstance: taxi_zones_ingestion_gcs_dag.format_to_parquet_task scheduled__2022-04-01T06:00:00+00:00 [running]> on host 3f188d455d5a
+[2022-05-31 19:22:25,541] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=taxi_zones_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=format_to_parquet_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-01T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-04-01T06:00:00+00:00
+[2022-05-31 19:22:26,542] {python.py:173} INFO - Done. Returned value was: None
+[2022-05-31 19:22:26,589] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=taxi_zones_ingestion_gcs_dag, task_id=format_to_parquet_task, execution_date=20220401T060000, start_date=20220531T192225, end_date=20220531T192226
+[2022-05-31 19:22:26,641] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-05-31 19:22:26,787] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

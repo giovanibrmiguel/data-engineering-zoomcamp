@@ -1,0 +1,48 @@
+[2022-05-30 22:44:30,308] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest manual__2022-05-30T22:44:27.091503+00:00 [queued]>
+[2022-05-30 22:44:30,322] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest manual__2022-05-30T22:44:27.091503+00:00 [queued]>
+[2022-05-30 22:44:30,323] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:44:30,324] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 22:44:30,325] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:44:30,343] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): ingest> on 2022-05-30 22:44:27.091503+00:00
+[2022-05-30 22:44:30,364] {standard_task_runner.py:52} INFO - Started process 3047 to run task
+[2022-05-30 22:44:30,376] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'ingest', 'manual__2022-05-30T22:44:27.091503+00:00', '--job-id', '269', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmprf4ziv4c', '--error-file', '/tmp/tmppc8pytth']
+[2022-05-30 22:44:30,378] {standard_task_runner.py:80} INFO - Job 269: Subtask ingest
+[2022-05-30 22:44:30,434] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.ingest manual__2022-05-30T22:44:27.091503+00:00 [running]> on host 8ac972de2f4f
+[2022-05-30 22:44:30,474] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 22:44:30,515] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=ingest
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-30T22:44:27.091503+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-05-30T22:44:27.091503+00:00
+[2022-05-30 22:44:30,523] {logging_mixin.py:115} INFO - yellow_taxi_2022_05 /opt/***/output_2022-05.parquet 2022-05-30T22:44:27.091503+00:00
+[2022-05-30 22:44:30,635] {logging_mixin.py:115} INFO - connection established successfully, inserting data...
+[2022-05-30 22:44:30,919] {taskinstance.py:1890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_script.py", line 18, in ingest_callable
+    df = pd.read_parquet(parquet_file)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parquet.py", line 500, in read_parquet
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parquet.py", line 240, in read
+    path_or_handle, columns=columns, **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/parquet.py", line 1915, in read_table
+    coerce_int96_timestamp_unit=coerce_int96_timestamp_unit
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/parquet.py", line 1711, in __init__
+    [fragment], schema=fragment.physical_schema,
+  File "pyarrow/_dataset.pyx", line 978, in pyarrow._dataset.Fragment.physical_schema.__get__
+  File "pyarrow/error.pxi", line 143, in pyarrow.lib.pyarrow_internal_check_status
+  File "pyarrow/error.pxi", line 99, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: Could not open Parquet input source '<Buffer>': Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.
+[2022-05-30 22:44:30,974] {taskinstance.py:1401} INFO - Marking task as FAILED. dag_id=LocalIngestionDag, task_id=ingest, execution_date=20220530T224427, start_date=20220530T224430, end_date=20220530T224430
+[2022-05-30 22:44:31,014] {standard_task_runner.py:97} ERROR - Failed to execute job 269 for task ingest (Could not open Parquet input source '<Buffer>': Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.; 3047)
+[2022-05-30 22:44:31,074] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-05-30 22:44:31,179] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

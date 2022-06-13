@@ -1,0 +1,90 @@
+[2022-05-31 19:04:27,887] {processor.py:153} INFO - Started process (PID=36) to work on /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:04:27,891] {processor.py:641} INFO - Processing file /opt/airflow/dags/zones_ingestion.py for tasks to queue
+[2022-05-31 19:04:27,893] {logging_mixin.py:115} INFO - [2022-05-31 19:04:27,893] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:04:28,361] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:04:28,384] {processor.py:161} INFO - Processing /opt/airflow/dags/zones_ingestion.py took 0.506 seconds
+[2022-05-31 19:04:59,005] {processor.py:153} INFO - Started process (PID=78) to work on /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:04:59,009] {processor.py:641} INFO - Processing file /opt/airflow/dags/zones_ingestion.py for tasks to queue
+[2022-05-31 19:04:59,012] {logging_mixin.py:115} INFO - [2022-05-31 19:04:59,012] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:04:59,528] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:04:59,582] {processor.py:161} INFO - Processing /opt/airflow/dags/zones_ingestion.py took 0.581 seconds
+[2022-05-31 19:05:29,912] {processor.py:153} INFO - Started process (PID=104) to work on /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:05:29,914] {processor.py:641} INFO - Processing file /opt/airflow/dags/zones_ingestion.py for tasks to queue
+[2022-05-31 19:05:29,923] {logging_mixin.py:115} INFO - [2022-05-31 19:05:29,923] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:05:31,740] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:05:31,852] {processor.py:161} INFO - Processing /opt/airflow/dags/zones_ingestion.py took 1.951 seconds
+[2022-05-31 19:06:02,954] {processor.py:153} INFO - Started process (PID=140) to work on /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:06:02,977] {processor.py:641} INFO - Processing file /opt/airflow/dags/zones_ingestion.py for tasks to queue
+[2022-05-31 19:06:03,009] {logging_mixin.py:115} INFO - [2022-05-31 19:06:03,007] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:06:04,227] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:06:04,284] {processor.py:161} INFO - Processing /opt/airflow/dags/zones_ingestion.py took 1.345 seconds
+[2022-05-31 19:06:34,715] {processor.py:153} INFO - Started process (PID=165) to work on /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:06:34,718] {processor.py:641} INFO - Processing file /opt/airflow/dags/zones_ingestion.py for tasks to queue
+[2022-05-31 19:06:34,720] {logging_mixin.py:115} INFO - [2022-05-31 19:06:34,720] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:06:35,534] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:06:35,624] {processor.py:161} INFO - Processing /opt/airflow/dags/zones_ingestion.py took 0.915 seconds
+[2022-05-31 19:07:05,982] {processor.py:153} INFO - Started process (PID=190) to work on /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:07:05,984] {processor.py:641} INFO - Processing file /opt/airflow/dags/zones_ingestion.py for tasks to queue
+[2022-05-31 19:07:05,986] {logging_mixin.py:115} INFO - [2022-05-31 19:07:05,986] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:07:06,490] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:07:06,524] {processor.py:161} INFO - Processing /opt/airflow/dags/zones_ingestion.py took 0.550 seconds
+[2022-05-31 19:07:36,918] {processor.py:153} INFO - Started process (PID=229) to work on /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:07:36,924] {processor.py:641} INFO - Processing file /opt/airflow/dags/zones_ingestion.py for tasks to queue
+[2022-05-31 19:07:36,933] {logging_mixin.py:115} INFO - [2022-05-31 19:07:36,932] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:07:38,620] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:07:38,732] {processor.py:161} INFO - Processing /opt/airflow/dags/zones_ingestion.py took 1.825 seconds
+[2022-05-31 19:08:09,145] {processor.py:153} INFO - Started process (PID=255) to work on /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:08:09,148] {processor.py:641} INFO - Processing file /opt/airflow/dags/zones_ingestion.py for tasks to queue
+[2022-05-31 19:08:09,149] {logging_mixin.py:115} INFO - [2022-05-31 19:08:09,149] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:08:10,176] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:08:10,247] {processor.py:161} INFO - Processing /opt/airflow/dags/zones_ingestion.py took 1.106 seconds
+[2022-05-31 19:08:40,742] {processor.py:153} INFO - Started process (PID=289) to work on /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:08:40,747] {processor.py:641} INFO - Processing file /opt/airflow/dags/zones_ingestion.py for tasks to queue
+[2022-05-31 19:08:40,753] {logging_mixin.py:115} INFO - [2022-05-31 19:08:40,753] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:08:41,829] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:08:41,928] {processor.py:161} INFO - Processing /opt/airflow/dags/zones_ingestion.py took 1.192 seconds
+[2022-05-31 19:09:12,330] {processor.py:153} INFO - Started process (PID=325) to work on /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:09:12,334] {processor.py:641} INFO - Processing file /opt/airflow/dags/zones_ingestion.py for tasks to queue
+[2022-05-31 19:09:12,338] {logging_mixin.py:115} INFO - [2022-05-31 19:09:12,338] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:09:13,243] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:09:13,304] {processor.py:161} INFO - Processing /opt/airflow/dags/zones_ingestion.py took 0.980 seconds
+[2022-05-31 19:09:43,529] {processor.py:153} INFO - Started process (PID=358) to work on /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:09:43,535] {processor.py:641} INFO - Processing file /opt/airflow/dags/zones_ingestion.py for tasks to queue
+[2022-05-31 19:09:43,542] {logging_mixin.py:115} INFO - [2022-05-31 19:09:43,541] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:09:45,871] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:09:45,943] {processor.py:161} INFO - Processing /opt/airflow/dags/zones_ingestion.py took 2.423 seconds
+[2022-05-31 19:10:16,199] {processor.py:153} INFO - Started process (PID=386) to work on /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:10:16,209] {processor.py:641} INFO - Processing file /opt/airflow/dags/zones_ingestion.py for tasks to queue
+[2022-05-31 19:10:16,219] {logging_mixin.py:115} INFO - [2022-05-31 19:10:16,219] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:10:16,800] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:10:16,894] {processor.py:161} INFO - Processing /opt/airflow/dags/zones_ingestion.py took 0.702 seconds
+[2022-05-31 19:10:47,501] {processor.py:153} INFO - Started process (PID=412) to work on /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:10:47,513] {processor.py:641} INFO - Processing file /opt/airflow/dags/zones_ingestion.py for tasks to queue
+[2022-05-31 19:10:47,523] {logging_mixin.py:115} INFO - [2022-05-31 19:10:47,523] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:10:49,486] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:10:49,824] {processor.py:161} INFO - Processing /opt/airflow/dags/zones_ingestion.py took 2.347 seconds
+[2022-05-31 19:11:20,432] {processor.py:153} INFO - Started process (PID=448) to work on /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:11:20,441] {processor.py:641} INFO - Processing file /opt/airflow/dags/zones_ingestion.py for tasks to queue
+[2022-05-31 19:11:20,444] {logging_mixin.py:115} INFO - [2022-05-31 19:11:20,444] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:11:22,433] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:11:22,566] {processor.py:161} INFO - Processing /opt/airflow/dags/zones_ingestion.py took 2.141 seconds
+[2022-05-31 19:11:52,907] {processor.py:153} INFO - Started process (PID=484) to work on /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:11:52,911] {processor.py:641} INFO - Processing file /opt/airflow/dags/zones_ingestion.py for tasks to queue
+[2022-05-31 19:11:52,913] {logging_mixin.py:115} INFO - [2022-05-31 19:11:52,913] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:11:53,292] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:11:53,313] {processor.py:161} INFO - Processing /opt/airflow/dags/zones_ingestion.py took 0.412 seconds
+[2022-05-31 19:12:23,999] {processor.py:153} INFO - Started process (PID=511) to work on /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:12:24,010] {processor.py:641} INFO - Processing file /opt/airflow/dags/zones_ingestion.py for tasks to queue
+[2022-05-31 19:12:24,013] {logging_mixin.py:115} INFO - [2022-05-31 19:12:24,012] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:12:25,401] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:12:25,490] {processor.py:161} INFO - Processing /opt/airflow/dags/zones_ingestion.py took 1.490 seconds
+[2022-05-31 19:12:56,010] {processor.py:153} INFO - Started process (PID=536) to work on /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:12:56,022] {processor.py:641} INFO - Processing file /opt/airflow/dags/zones_ingestion.py for tasks to queue
+[2022-05-31 19:12:56,034] {logging_mixin.py:115} INFO - [2022-05-31 19:12:56,032] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:12:58,789] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:12:58,880] {processor.py:161} INFO - Processing /opt/airflow/dags/zones_ingestion.py took 2.888 seconds
+[2022-05-31 19:13:30,125] {processor.py:153} INFO - Started process (PID=569) to work on /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:13:30,134] {processor.py:641} INFO - Processing file /opt/airflow/dags/zones_ingestion.py for tasks to queue
+[2022-05-31 19:13:30,143] {logging_mixin.py:115} INFO - [2022-05-31 19:13:30,142] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:13:33,608] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/zones_ingestion.py
+[2022-05-31 19:13:33,857] {processor.py:161} INFO - Processing /opt/airflow/dags/zones_ingestion.py took 3.771 seconds

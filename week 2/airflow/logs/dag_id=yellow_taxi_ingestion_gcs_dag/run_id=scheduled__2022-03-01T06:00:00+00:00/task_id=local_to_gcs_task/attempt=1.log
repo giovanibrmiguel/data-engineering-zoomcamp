@@ -1,0 +1,79 @@
+[2022-05-31 18:07:58,014] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: yellow_taxi_ingestion_gcs_dag.local_to_gcs_task scheduled__2022-03-01T06:00:00+00:00 [queued]>
+[2022-05-31 18:07:58,025] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: yellow_taxi_ingestion_gcs_dag.local_to_gcs_task scheduled__2022-03-01T06:00:00+00:00 [queued]>
+[2022-05-31 18:07:58,026] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-31 18:07:58,027] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-31 18:07:58,029] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-31 18:07:58,041] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): local_to_gcs_task> on 2022-03-01 06:00:00+00:00
+[2022-05-31 18:07:58,048] {standard_task_runner.py:52} INFO - Started process 1050 to run task
+[2022-05-31 18:07:58,053] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yellow_taxi_ingestion_gcs_dag', 'local_to_gcs_task', 'scheduled__2022-03-01T06:00:00+00:00', '--job-id', '324', '--raw', '--subdir', 'DAGS_FOLDER/yellow_taxi_ingestion.py', '--cfg-path', '/tmp/tmpr9luhf8v', '--error-file', '/tmp/tmpuifx887i']
+[2022-05-31 18:07:58,056] {standard_task_runner.py:80} INFO - Job 324: Subtask local_to_gcs_task
+[2022-05-31 18:07:58,116] {task_command.py:370} INFO - Running <TaskInstance: yellow_taxi_ingestion_gcs_dag.local_to_gcs_task scheduled__2022-03-01T06:00:00+00:00 [running]> on host 8ac972de2f4f
+[2022-05-31 18:07:58,161] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-31 18:07:58,230] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yellow_taxi_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=local_to_gcs_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-01T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-03-01T06:00:00+00:00
+[2022-05-31 18:07:58,240] {taskinstance.py:1890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/yellow_taxi_ingestion.py", line 46, in upload_to_gcs
+    client = storage.Client()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/client.py", line 128, in __init__
+    _http=_http,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/client/__init__.py", line 320, in __init__
+    _ClientProjectMixin.__init__(self, project=project, credentials=credentials)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/client/__init__.py", line 268, in __init__
+    project = self._determine_default(project)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/client/__init__.py", line 287, in _determine_default
+    return _determine_default_project(project)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_helpers/__init__.py", line 152, in _determine_default_project
+    _, project = google.auth.default()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/auth/_default.py", line 546, in default
+    credentials, project_id = checker()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/auth/_default.py", line 539, in <lambda>
+    lambda: _get_explicit_environ_credentials(quota_project_id=quota_project_id),
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/auth/_default.py", line 219, in _get_explicit_environ_credentials
+    os.environ[environment_vars.CREDENTIALS], quota_project_id=quota_project_id
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/auth/_default.py", line 118, in load_credentials_from_file
+    "File {} was not found.".format(filename)
+google.auth.exceptions.DefaultCredentialsError: File ~/google/credentials/google_credentials.json was not found.
+[2022-05-31 18:07:58,263] {taskinstance.py:1401} INFO - Marking task as FAILED. dag_id=yellow_taxi_ingestion_gcs_dag, task_id=local_to_gcs_task, execution_date=20220301T060000, start_date=20220531T180758, end_date=20220531T180758
+[2022-05-31 18:07:58,276] {standard_task_runner.py:97} ERROR - Failed to execute job 324 for task local_to_gcs_task (File ~/google/credentials/google_credentials.json was not found.; 1050)
+[2022-05-31 18:07:58,309] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-05-31 18:07:58,342] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-31 18:50:10,532] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: yellow_taxi_ingestion_gcs_dag.local_to_gcs_task scheduled__2022-03-01T06:00:00+00:00 [queued]>
+[2022-05-31 18:50:10,544] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: yellow_taxi_ingestion_gcs_dag.local_to_gcs_task scheduled__2022-03-01T06:00:00+00:00 [queued]>
+[2022-05-31 18:50:10,546] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-31 18:50:10,548] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-31 18:50:10,551] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-31 18:50:10,570] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): local_to_gcs_task> on 2022-03-01 06:00:00+00:00
+[2022-05-31 18:50:10,578] {standard_task_runner.py:52} INFO - Started process 1212 to run task
+[2022-05-31 18:50:10,585] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'yellow_taxi_ingestion_gcs_dag', 'local_to_gcs_task', 'scheduled__2022-03-01T06:00:00+00:00', '--job-id', '419', '--raw', '--subdir', 'DAGS_FOLDER/yellow_taxi_ingestion.py', '--cfg-path', '/tmp/tmpfc5wranp', '--error-file', '/tmp/tmp8k6dbjni']
+[2022-05-31 18:50:10,588] {standard_task_runner.py:80} INFO - Job 419: Subtask local_to_gcs_task
+[2022-05-31 18:50:10,680] {task_command.py:370} INFO - Running <TaskInstance: yellow_taxi_ingestion_gcs_dag.local_to_gcs_task scheduled__2022-03-01T06:00:00+00:00 [running]> on host 3f188d455d5a
+[2022-05-31 18:50:10,740] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-31 18:50:10,808] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=yellow_taxi_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=local_to_gcs_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-01T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-03-01T06:00:00+00:00
+[2022-05-31 18:50:15,261] {python.py:173} INFO - Done. Returned value was: None
+[2022-05-31 18:50:15,295] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=yellow_taxi_ingestion_gcs_dag, task_id=local_to_gcs_task, execution_date=20220301T060000, start_date=20220531T185010, end_date=20220531T185015
+[2022-05-31 18:50:15,359] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-05-31 18:50:15,424] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

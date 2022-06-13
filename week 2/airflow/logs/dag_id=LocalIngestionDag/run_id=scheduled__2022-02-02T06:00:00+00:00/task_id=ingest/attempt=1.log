@@ -1,0 +1,297 @@
+[2022-05-30 20:21:36,421] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 20:21:36,668] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 20:21:36,692] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 20:21:36,699] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 20:21:36,708] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 20:21:37,153] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): ingest> on 2022-02-02 06:00:00+00:00
+[2022-05-30 20:21:37,345] {standard_task_runner.py:52} INFO - Started process 1304 to run task
+[2022-05-30 20:21:37,424] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'ingest', 'scheduled__2022-02-02T06:00:00+00:00', '--job-id', '144', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpg4hp78at', '--error-file', '/tmp/tmpbvcub8c3']
+[2022-05-30 20:21:37,479] {standard_task_runner.py:80} INFO - Job 144: Subtask ingest
+[2022-05-30 20:21:39,396] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.ingest scheduled__2022-02-02T06:00:00+00:00 [running]> on host e083cbf9476b
+[2022-05-30 20:21:41,650] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 20:21:42,408] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=ingest
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-02T06:00:00+00:00
+[2022-05-30 20:21:42,433] {logging_mixin.py:115} INFO - yellow_taxi_2022_02 /opt/***/output_2022-02.parquet 2022-02-02T06:00:00+00:00
+[2022-05-30 20:21:42,441] {taskinstance.py:1890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_script.py", line 12, in ingest_callable
+    engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{db}')
+  File "<string>", line 2, in create_engine
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 298, in warned
+    return fn(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 518, in create_engine
+    u = _url.make_url(url)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/url.py", line 711, in make_url
+    return _parse_rfc1738_args(name_or_url)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/url.py", line 772, in _parse_rfc1738_args
+    components["port"] = int(components["port"])
+ValueError: invalid literal for int() with base 10: 'None'
+[2022-05-30 20:21:42,507] {taskinstance.py:1401} INFO - Marking task as FAILED. dag_id=LocalIngestionDag, task_id=ingest, execution_date=20220202T060000, start_date=20220530T202136, end_date=20220530T202142
+[2022-05-30 20:21:42,581] {standard_task_runner.py:97} ERROR - Failed to execute job 144 for task ingest (invalid literal for int() with base 10: 'None'; 1304)
+[2022-05-30 20:21:42,777] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-05-30 20:21:42,913] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-30 20:30:06,627] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 20:30:06,643] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 20:30:06,644] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 20:30:06,646] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 20:30:06,648] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 20:30:06,662] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): ingest> on 2022-02-02 06:00:00+00:00
+[2022-05-30 20:30:06,675] {standard_task_runner.py:52} INFO - Started process 1810 to run task
+[2022-05-30 20:30:06,684] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'ingest', 'scheduled__2022-02-02T06:00:00+00:00', '--job-id', '159', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpc4bp8vy9', '--error-file', '/tmp/tmppzb09_bb']
+[2022-05-30 20:30:06,686] {standard_task_runner.py:80} INFO - Job 159: Subtask ingest
+[2022-05-30 20:30:06,753] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.ingest scheduled__2022-02-02T06:00:00+00:00 [running]> on host e083cbf9476b
+[2022-05-30 20:30:06,788] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 20:30:06,835] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=ingest
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-02T06:00:00+00:00
+[2022-05-30 20:30:06,838] {logging_mixin.py:115} INFO - yellow_taxi_2022_02 /opt/***/output_2022-02.parquet 2022-02-02T06:00:00+00:00
+[2022-05-30 20:30:06,839] {taskinstance.py:1890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_script.py", line 12, in ingest_callable
+    engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{db}')
+  File "<string>", line 2, in create_engine
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/deprecations.py", line 298, in warned
+    return fn(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 518, in create_engine
+    u = _url.make_url(url)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/url.py", line 711, in make_url
+    return _parse_rfc1738_args(name_or_url)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/url.py", line 772, in _parse_rfc1738_args
+    components["port"] = int(components["port"])
+ValueError: invalid literal for int() with base 10: 'None'
+[2022-05-30 20:30:06,852] {taskinstance.py:1401} INFO - Marking task as FAILED. dag_id=LocalIngestionDag, task_id=ingest, execution_date=20220202T060000, start_date=20220530T203006, end_date=20220530T203006
+[2022-05-30 20:30:06,863] {standard_task_runner.py:97} ERROR - Failed to execute job 159 for task ingest (invalid literal for int() with base 10: 'None'; 1810)
+[2022-05-30 20:30:06,897] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-05-30 20:30:06,933] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-30 21:14:13,482] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 21:14:13,492] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 21:14:13,494] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 21:14:13,495] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 21:14:13,496] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 21:14:13,508] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): ingest> on 2022-02-02 06:00:00+00:00
+[2022-05-30 21:14:13,517] {standard_task_runner.py:52} INFO - Started process 280 to run task
+[2022-05-30 21:14:13,521] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'ingest', 'scheduled__2022-02-02T06:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmp8l8707f5', '--error-file', '/tmp/tmpoye6a2kl']
+[2022-05-30 21:14:13,523] {standard_task_runner.py:80} INFO - Job 11: Subtask ingest
+[2022-05-30 21:14:13,580] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.ingest scheduled__2022-02-02T06:00:00+00:00 [running]> on host 973151ef250d
+[2022-05-30 21:14:13,613] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 21:14:13,653] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=ingest
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-02T06:00:00+00:00
+[2022-05-30 21:14:13,655] {logging_mixin.py:115} INFO - yellow_taxi_2022_02 /opt/***/output_2022-02.parquet 2022-02-02T06:00:00+00:00
+[2022-05-30 21:14:13,671] {taskinstance.py:1890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3141, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 301, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 755, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 419, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 145, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 142, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 247, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 362, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 599, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 583, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "pgdatabase" to address: Name or service not known
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_script.py", line 13, in ingest_callable
+    engine.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3095, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 91, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3174, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3145, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2004, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3141, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 301, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 755, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 419, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 145, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 142, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 247, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 362, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 599, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 583, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "pgdatabase" to address: Name or service not known
+
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+[2022-05-30 21:14:13,687] {taskinstance.py:1401} INFO - Marking task as FAILED. dag_id=LocalIngestionDag, task_id=ingest, execution_date=20220202T060000, start_date=20220530T211413, end_date=20220530T211413
+[2022-05-30 21:14:13,696] {standard_task_runner.py:97} ERROR - Failed to execute job 11 for task ingest ((psycopg2.OperationalError) could not translate host name "pgdatabase" to address: Name or service not known
+
+(Background on this error at: http://sqlalche.me/e/14/e3q8); 280)
+[2022-05-30 21:14:13,736] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-05-30 21:14:13,766] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-30 22:12:49,851] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 22:12:49,888] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 22:12:49,891] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:12:49,893] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 22:12:49,895] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:12:49,943] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): ingest> on 2022-02-02 06:00:00+00:00
+[2022-05-30 22:12:50,003] {standard_task_runner.py:52} INFO - Started process 1026 to run task
+[2022-05-30 22:12:50,029] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'ingest', 'scheduled__2022-02-02T06:00:00+00:00', '--job-id', '196', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpssmw8k5o', '--error-file', '/tmp/tmph98i3ury']
+[2022-05-30 22:12:50,035] {standard_task_runner.py:80} INFO - Job 196: Subtask ingest
+[2022-05-30 22:12:50,216] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.ingest scheduled__2022-02-02T06:00:00+00:00 [running]> on host 8ac972de2f4f
+[2022-05-30 22:12:50,292] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 22:12:50,397] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=ingest
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-02T06:00:00+00:00
+[2022-05-30 22:12:50,405] {logging_mixin.py:115} INFO - yellow_taxi_2022_02 /opt/***/output_2022-02.parquet 2022-02-02T06:00:00+00:00
+[2022-05-30 22:12:50,480] {logging_mixin.py:115} INFO - connection established successfully, inserting data...
+[2022-05-30 22:13:20,249] {local_task_job.py:156} INFO - Task exited with return code Negsignal.SIGKILL
+[2022-05-30 22:13:20,277] {taskinstance.py:1401} INFO - Marking task as FAILED. dag_id=LocalIngestionDag, task_id=ingest, execution_date=20220202T060000, start_date=20220530T221249, end_date=20220530T221320
+[2022-05-30 22:13:20,310] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-30 22:17:23,252] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 22:17:23,515] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 22:17:23,541] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:17:23,544] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 22:17:23,554] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:17:23,745] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): ingest> on 2022-02-02 06:00:00+00:00
+[2022-05-30 22:17:23,906] {standard_task_runner.py:52} INFO - Started process 1410 to run task
+[2022-05-30 22:17:24,096] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'ingest', 'scheduled__2022-02-02T06:00:00+00:00', '--job-id', '223', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpj7ra8tue', '--error-file', '/tmp/tmp3pzaygjf']
+[2022-05-30 22:17:24,168] {standard_task_runner.py:80} INFO - Job 223: Subtask ingest
+[2022-05-30 22:17:27,690] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.ingest scheduled__2022-02-02T06:00:00+00:00 [running]> on host 8ac972de2f4f
+[2022-05-30 22:17:28,914] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 22:17:29,513] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=ingest
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-02T06:00:00+00:00
+[2022-05-30 22:17:29,533] {logging_mixin.py:115} INFO - yellow_taxi_2022_02 /opt/***/output_2022-02.parquet 2022-02-02T06:00:00+00:00
+[2022-05-30 22:17:29,704] {logging_mixin.py:115} INFO - connection established successfully, inserting data...
+[2022-05-30 22:18:23,559] {local_task_job.py:156} INFO - Task exited with return code Negsignal.SIGKILL
+[2022-05-30 22:18:23,913] {taskinstance.py:1401} INFO - Marking task as FAILED. dag_id=LocalIngestionDag, task_id=ingest, execution_date=20220202T060000, start_date=20220530T221723, end_date=20220530T221823
+[2022-05-30 22:18:24,178] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-30 22:28:22,775] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 22:28:22,782] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: LocalIngestionDag.ingest scheduled__2022-02-02T06:00:00+00:00 [queued]>
+[2022-05-30 22:28:22,784] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:28:22,786] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-30 22:28:22,788] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-30 22:28:22,803] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): ingest> on 2022-02-02 06:00:00+00:00
+[2022-05-30 22:28:22,819] {standard_task_runner.py:52} INFO - Started process 2140 to run task
+[2022-05-30 22:28:22,830] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'ingest', 'scheduled__2022-02-02T06:00:00+00:00', '--job-id', '266', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpec6f8gw0', '--error-file', '/tmp/tmp99wu4oph']
+[2022-05-30 22:28:22,835] {standard_task_runner.py:80} INFO - Job 266: Subtask ingest
+[2022-05-30 22:28:22,906] {task_command.py:370} INFO - Running <TaskInstance: LocalIngestionDag.ingest scheduled__2022-02-02T06:00:00+00:00 [running]> on host 8ac972de2f4f
+[2022-05-30 22:28:22,942] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:202: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-05-30 22:28:22,978] {taskinstance.py:1572} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=LocalIngestionDag
+AIRFLOW_CTX_TASK_ID=ingest
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T06:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-02T06:00:00+00:00
+[2022-05-30 22:28:22,982] {logging_mixin.py:115} INFO - yellow_taxi_2022_02 /opt/***/output_2022-02.parquet 2022-02-02T06:00:00+00:00
+[2022-05-30 22:28:23,008] {logging_mixin.py:115} INFO - connection established successfully, inserting data...
+[2022-05-30 22:28:50,668] {local_task_job.py:156} INFO - Task exited with return code Negsignal.SIGKILL
+[2022-05-30 22:28:50,709] {taskinstance.py:1401} INFO - Marking task as FAILED. dag_id=LocalIngestionDag, task_id=ingest, execution_date=20220202T060000, start_date=20220530T222822, end_date=20220530T222850
+[2022-05-30 22:28:50,758] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
