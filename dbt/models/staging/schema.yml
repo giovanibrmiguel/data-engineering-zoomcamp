@@ -12,6 +12,7 @@ sources:
       tables:
         - name: green_taxi_trips
         - name: yellow_taxi_trips
+        - name: taxi_zones
          # freshness:
            # error_after: {count: 6, period: hour}
 
@@ -198,3 +199,7 @@ models:
             description: Total amount of all tolls paid in trip.
           - name: Total_amount 
             description: The total amount charged to passengers. Does not include cash tips.
+      
+    - name: stg_taxi_zones
+      description: >
+        This table provides info regarding the taxi zones names, and should be joind to tables specific to taxi trips.
