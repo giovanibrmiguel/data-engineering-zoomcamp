@@ -1,9 +1,9 @@
 {{ config(materialized='table') }}
 
 SELECT
-    location_id,
+    CAST(locationid AS integer) AS location_id,
     borough,
     zone,
     replace(service_zone,'Boro','Green') as service_zone
 FROM
-    {{ ref('stg_taxi_zones') }}
+    {{ source('staging','taxi_zones') }}

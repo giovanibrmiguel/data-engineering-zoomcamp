@@ -1,9 +1,0 @@
-{{ config(materialized='view') }}
-
-SELECT
-    CAST(locationid AS integer) AS location_id,
-    borough,
-    zone,
-    service_zone
-FROM
-    {{ source('staging','taxi_zones') }}
