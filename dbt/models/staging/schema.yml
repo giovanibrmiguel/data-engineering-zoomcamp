@@ -1,5 +1,3 @@
-# TO DO NEXT: criar taxi_zone_lookup, criar fhv, criar tabela em core
-
 version: 2
 
 sources:
@@ -13,11 +11,12 @@ sources:
         - name: green_taxi_trips
         - name: yellow_taxi_trips
         - name: taxi_zones
+        - name: fhv_trips
          # freshness:
            # error_after: {count: 6, period: hour}
 
 models:
-    - name: stg_green_tripdata
+    - name: stg_green_taxi_trips
       description: >
         Trip made by green taxis, also known as boro taxis and street-hail liveries.
         Green taxis may respond to street hails,but only in the areas indicated in green on the
@@ -200,6 +199,6 @@ models:
           - name: Total_amount 
             description: The total amount charged to passengers. Does not include cash tips.
       
-    - name: stg_taxi_zones
+    - name: stg_fhv_trips
       description: >
-        This table provides info regarding the taxi zones names, and should be joind to tables specific to taxi trips.
+        This table provides info on For Hire Vehicles.
